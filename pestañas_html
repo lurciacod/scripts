@@ -1,0 +1,52 @@
+<div class="tabs">
+  <button class="tablinks" onclick="openTab('dataGathering')">Recolección de Datos</button>
+  <button class="tablinks" onclick="openTab('dataProcessing')">Procesamiento de Datos</button>
+  <button class="tablinks" onclick="openTab('dataStorage')">Almacenamiento de Datos</button>
+  <button class="tablinks" onclick="openTab('dataAnalysis')">Análisis de Datos</button>
+  <button class="tablinks" onclick="openTab('dataVisualization')">Visualización de Datos</button>
+  <button class="tablinks" onclick="openTab('dataManagement')">Gestión de Datos</button>
+</div>
+
+<div id="dataGathering" class="tabcontent">
+  <img src="data_gathering.jpg" alt="Recolección de Datos">
+</div>
+
+<div id="dataProcessing" class="tabcontent">
+  <img src="data_processing.jpg" alt="Procesamiento de Datos">
+</div>
+
+<div id="dataStorage" class="tabcontent">
+  <img src="data_storage.jpg" alt="Almacenamiento de Datos">
+</div>
+
+<div id="dataAnalysis" class="tabcontent">
+  <img src="data_analysis.jpg" alt="Análisis de Datos">
+</div>
+
+<div id="dataVisualization" class="tabcontent">
+  <img src="data_visualization.jpg" alt="Visualización de Datos">
+</div>
+
+<div id="dataManagement" class="tabcontent">
+  <img src="data_management.jpg" alt="Gestión de Datos">
+</div>
+
+<style>
+.tabcontent img {
+  max-width: 100%; /* Limita el ancho de la imagen al ancho del contenedor */
+  height: auto; /* Ajusta la altura de la imagen proporcionalmente */
+  display: block; /* Para centrar la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+</style>
+
+<script>
+function openTab(tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
