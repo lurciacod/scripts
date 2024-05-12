@@ -1,0 +1,47 @@
+import pyodbc
+
+# Parámetros de conexión
+server = 'DESKTOP-JS63LHU'
+database = 'SUNARP'
+trusted_connection = 'yes'
+
+try:
+    # Establecer la conexión a la base de datos
+    conn = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection={trusted_connection}')
+
+    # Crear un cursor para ejecutar las consultas
+    cursor = conn.cursor()
+
+    # Consulta para agregar la columna feccorte si no existe
+    alter_table_query = """
+    IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'prueba' AND COLUMN_NAME = 'feccorte')
+    BEGIN
+        ALTER TABLE prueba
+        ADD feccorte DATE
+    END
+    """
+    
+    # Consulta para actualizar la columna feccorte para todos los registros
+    update_query = """
+    UPDATE prueba
+    SET feccorte = '2024-07-04'
+    """
+
+    # Ejecutar la consulta para agregar la columna feccorte
+    cursor.execute(alter_table_query)
+
+    # Ejecutar la consulta para actualizar la columna feccorte
+    cursor.execute(update_query)
+
+    # Confirmar los cambios
+    conn.commit()
+
+    print("Columna feccorte agregada y actualizada en la tabla deco_prueba correctamente.")
+
+except Exception as e:
+    print("Error al agregar y actualizar la columna feccorte en la tabla prueba:", e)
+
+finally:
+    # Cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
