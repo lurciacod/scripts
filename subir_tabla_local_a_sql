@@ -1,0 +1,55 @@
+import pyodbc
+
+# Parámetros de conexión
+server = 'DESKTOP-nobre'
+database = 'bd'
+trusted_connection = 'yes'
+
+# Ruta del archivo de texto a cargar
+file_path = r'D:\prueba.txt'
+
+# Consulta para crear la tabla d_prueba si no existe
+create_table_query = """
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name='_prueba')
+BEGIN
+    CREATE TABLE deco_prueba (
+   xx
+    )
+END
+"""
+
+# Consulta para cargar los datos en la tabla deco_prueba
+bulk_insert_query = f"""
+BULK INSERT deco_prueba
+FROM '{file_path}'
+WITH (
+    FIELDTERMINATOR = '|',  -- Delimitador de campos
+    ROWTERMINATOR = '\n'    -- Delimitador de filas
+)
+"""
+
+try:
+    # Establecer la conexión a la base de datos
+    conn = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection={trusted_connection}')
+
+    # Crear un cursor para ejecutar las consultas
+    cursor = conn.cursor()
+
+    # Ejecutar la consulta para crear la tabla si no existe
+    cursor.execute(create_table_query)
+
+    # Ejecutar la consulta para cargar los datos
+    cursor.execute(bulk_insert_query)
+
+    # Confirmar los cambios
+    conn.commit()
+
+    print("Datos cargados en la tabla dprueba correctamente.")
+
+except Exception as e:
+    print("Error al cargar los datos en la tabla dprueba:", e)
+
+finally:
+    # Cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
