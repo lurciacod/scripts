@@ -1,0 +1,52 @@
+<div class="titulo-analisis">
+  <h1><strong>Análisis de Datos: Claves para el Éxito</strong></h1>
+</div>
+<div class="subtitulo-analisis">
+  <p>Gobierno y Transformación</p>
+</div>
+
+<style>
+  .titulo-analisis {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #000000; /* Color negro para el texto */
+    background-color: #00aeef; /* Cambio del color de fondo */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .titulo-analisis strong {
+    font-weight: bold;
+    color: #ffffff; /* Color blanco para las palabras resaltadas */
+  }
+
+  .subtitulo-analisis {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* Color blanco para el texto */
+    background-color: #fcb900; /* Color amarillo */
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .titulo-analisis {
+      padding: 15px; /* Reducimos el relleno */
+      font-size: 16px; /* Disminuimos el tamaño de fuente */
+    }
+
+    .titulo-analisis h1 {
+      font-size: 22px; /* Disminuimos el tamaño de fuente del título principal */
+    }
+
+    .subtitulo-analisis {
+      padding: 8px;
+      font-size: 14px; /* Disminuimos el tamaño de fuente del subtítulo */
+      margin-top: 15px;
+    }
+  }
+</style>
