@@ -1,0 +1,55 @@
+--BLOQUE TEXTO GOOGLE FONTS:
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        .container {
+            background-color: #0693e3;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .container a {
+            background-color: #cf2e2e;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .container a:hover {
+            background-color: #b52424;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Descubre Nuestro Espacio</h1>
+        <h2>Potencia tus Ideas</h2>
+        <p>Experimenta nuestra innovadora experiencia "Escape Room" en nuestras sedes de Javier Prado y Chacarilla. Diseñada para desatar tu creatividad y potenciar tu ingenio.</p>
+        <a href="#">Reserva tu Lugar</a>
+    </div>
+</body>
