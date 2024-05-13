@@ -1,0 +1,74 @@
+<footer class="footer">
+    <div class="botones">
+        <a href="#" class="boton">Home</a>
+        <a href="https://datapipelinesolutions.com/servicios/" class="boton">Servicios</a>
+        <a href="https://datapipelinesolutions.com/nosotros/" class="boton">Nosotros</a>
+        <a href="#" class="boton">Contáctanos</a>
+    </div>
+</footer>
+
+<style>
+    /* Estilos comunes */
+    .footer {
+        background-color: #000;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+        .botones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Agregamos espacio entre los botones */
+        }
+
+        .boton {
+            color: #fff;
+            background-color: #00C7C4;
+            border: 2px solid #00C7C4;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: calc(50% - 10px); /* Ajuste del ancho de los botones */
+            max-width: 200px;
+        }
+
+        .boton:hover {
+            background-color: transparent;
+            color: #00C7C4;
+        }
+    }
+
+    /* Estilos para pantallas más grandes */
+    @media screen and (min-width: 769px) {
+        .botones {
+            display: flex;
+            justify-content: center;
+        }
+
+        .boton {
+            color: #fff;
+            background-color: #00C7C4;
+            border: 2px solid #00C7C4;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: transparent;
+            color: #00C7C4;
+        }
+    }
+</style>
