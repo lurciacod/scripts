@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Horizontal con Submenús Mejorado</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Color de fondo */
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #0693e3; /* Color celeste */
+            display: flex;
+            justify-content: center;
+        }
+        .menu li {
+            position: relative;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+            font-weight: bold; /* Texto en negrita */
+            font-size: 18px; /* Tamaño de letra */
+        }
+        .menu a:hover {
+            background-color: #004d80; /* Cambio de color al pasar el ratón */
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #000000; /* Color negro */
+            border-radius: 5px;
+            padding: 5px 0; /* Espaciado interno */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+            z-index: 1; /* Asegura que esté sobre el contenido */
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .submenu li {
+            margin: 0;
+            white-space: nowrap; /* Evita el salto de línea */
+            border-bottom: 1px solid #ffffff; /* Línea delimitadora */
+        }
+        .submenu a {
+            display: block;
+            padding: 15px 20px; /* Ajuste de espaciado */
+            color: #ffffff; /* Letra blanca */
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Quita el subrayado */
+            font-family: 'Roboto', sans-serif; /* Google Fonts */
+            font-size: 16px; /* Tamaño de letra */
+            font-weight: normal; /* Texto normal */
+        }
+        .submenu a:hover {
+            background-color: #004d80; /* Cambio de color al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#" style="background-color: #0693e3;">Carreras</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Carrera 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Carrera 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Carrera 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#" style="background-color: #fcb900;">Especialidades</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Especialidad 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Especialidad 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Especialidad 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#" style="background-color: #cf2e2e;">Maestrías</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Maestría 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Maestría 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Maestría 3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+
