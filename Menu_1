@@ -1,0 +1,122 @@
+MENUS MOVIL (CON ICONOS)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Responsivo con Iconos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5; /* Color de fondo */
+        }
+        .menu {
+            background-color: #0693e3;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            font-size: 18px;
+        }
+        .menu a:hover {
+            color: #fcb900; /* Cambio de color al pasar el ratón */
+        }
+        .menu a i {
+            margin-right: 5px;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background-color: #0693e3;
+                padding: 10px 0;
+            }
+            .menu a {
+                display: block;
+                margin: 10px 0;
+                font-size: 18px; /* Tamaño de fuente más grande para dispositivos móviles */
+            }
+            .menu a i {
+                position: absolute;
+                left: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#"><i class="fas fa-envelope"></i> Correo</a>
+        <a href="#"><i class="fas fa-phone-alt"></i> Llamar</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Dirección</a>
+    </div>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+--menu 2
+
+logo y boton puntittos:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Logo y Botón de Menú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #0693e3;
+            color: #ffffff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-right: auto; /* Mueve el logo hacia la izquierda */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .menu-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo"><i class="fas fa-icons"></i> Logo</a>
+        <button class="menu-btn"><i class="fas fa-bars"></i></button>
+    </div>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
