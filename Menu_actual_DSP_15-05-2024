@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menús Responsivos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        /* Estilos para el menú de escritorio */
+        .navbar.desktop-menu {
+            background-color: hsla(0, 0%, 100%, 0);
+            color: #ffffff;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            list-style: none; /* Quitar los marcadores de lista */
+            margin: 0; /* Quitar el margen */
+        }
+        .desktop-menu li {
+            position: relative;
+        }
+        .desktop-menu a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .desktop-menu a:hover {
+            background-color: #f3f6f8;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 250px;
+        }
+        .desktop-menu li:hover .submenu {
+            display: block;
+        }
+        .submenu li {
+            margin: 0;
+            white-space: nowrap;
+            border-bottom: 1px solid #ffffff;
+        }
+        .submenu a {
+            display: block;
+            padding: 15px 20px;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .submenu a:hover {
+            background-color: #004d80;
+        }
+        
+        /* Estilos para el menú móvil */
+       
+
+        /* Consulta de medios para dispositivos móviles */
+       
+    </style>
+</head>
+<body>
+    <!-- Menú para dispositivos móviles -->
+    <div class="navbar mobile-menu">
+        <a href="#" class="logo"><i class="fas fa-icons"></i> Logo</a>
+        <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        <div class="menu-links">
+            <a href="#" class="menu-link">Home</a>
+            <a href="#" class="menu-link">Servicios</a>
+            <a href="#" class="menu-link">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Menú de escritorio -->
+    <ul class="navbar desktop-menu">
+        <li>
+            <a href="#" style="background-color: #cf2e2e;">Analítica de Datos</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Carrera 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Carrera 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Carrera 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" style="background-color: #fcb900;">Automatizaciones</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Especialidad 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Especialidad 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Especialidad 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" style="background-color: #000000;">Arquitectura de Datos</a>
+            <ul class="submenu">
+                <li><a href="#" style="background-color: #000000;">Maestría 1</a></li>
+                <li><a href="#" style="background-color: #000000;">Maestría 2</a></li>
+                <li><a href="#" style="background-color: #000000;">Maestría 3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
