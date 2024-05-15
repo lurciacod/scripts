@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Big Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Fondo celeste solo para el cuerpo */
+            background-color: #f0f0f0;
+        }
+        .big-data-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco solo para el contenedor */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .big-data-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0693e3;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase; /* Texto en mayúsculas */
+        }
+        .big-data-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .big-data-tab {
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #777;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .big-data-tab:hover {
+            background-color: #f0f0f0;
+        }
+        .big-data-tab.active {
+            background-color: #0693e3;
+            color: #fff;
+        }
+        .big-data-tabcontent {
+            display: none;
+            text-align: center;
+        }
+        .big-data-tabcontent img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px; /* Altura máxima ajustada */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .big-data-tabcontent.active {
+            display: block;
+        }
+
+        /* Estilos adicionales para dispositivos móviles */
+        @media screen and (max-width: 600px) {
+            .big-data-tab {
+                margin: 10px;
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            .big-data-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="big-data-container">
+        <div class="big-data-tabs">
+            <div class="big-data-tab active" onclick="openTab(event, 'dataGathering')">Data cruda</div>
+            <div class="big-data-tab" onclick="openTab(event, 'dataProcessing')">Transformación Data</div>
+            <div class="big-data-tab" onclick="openTab(event, 'dataStorage')">Limpieza del dato</div>
+            <div class="big-data-tab" onclick="openTab(event, 'dataAnalysis')">Perfilado de datos</div>
+            <div class="big-data-tab" onclick="openTab(event, 'dataVisualization')">Visualización de datos</div>
+        </div>
+        <div id="dataGathering" class="big-data-tabcontent active">
+            <img src="https://datapipelinesolutions.com/wp-content/uploads/2024/05/data2-scaled.jpg" alt="Recolección de Datos">
+        </div>
+        <div id="dataProcessing" class="big-data-tabcontent">
+            <img src="https://datapipelinesolutions.com/wp-content/uploads/2024/05/DATA3.jpg" alt="Procesamiento de Datos">
+        </div>
+        <div id="dataStorage" class="big-data-tabcontent">
+            <img src="https://datapipelinesolutions.com/wp-content/uploads/2024/05/pexels-tima-miroshnichenko-7567554-scaled.jpg" alt="Almacenamiento de Datos">
+        </div>
+        <div id="dataAnalysis" class="big-data-tabcontent">
+            <img src="https://datapipelinesolutions.com/wp-content/uploads/2024/05/pexels-pixabay-265087-scaled.jpg" alt="Análisis de Datos">
+        </div>
+        <div id="dataVisualization" class="big-data-tabcontent">
+            <img src="https://datapipelinesolutions.com/wp-content/uploads/2024/05/pexels-divinetechygirl-1181354-scaled.jpg" alt="Visualización de Datos">
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Muestra la primera pestaña al cargar la página
+            document.getElementById('dataGathering').classList.add('active');
+        });
+
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("big-data-tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove('active');
+            }
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>
