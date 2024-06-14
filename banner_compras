@@ -1,0 +1,212 @@
+--banner 
+
+<div class="wp-block-custom-html">
+    <style>
+        /* Estilos CSS para el banner */
+        .custom-banner {
+            position: relative;
+            width: 100vw; /* Ancho completo de la ventana */
+            height: 600px; /* Altura del banner ajustable según tus necesidades */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E7F6FF; /* Fondo del contenido */
+            margin-left: calc(-50vw + 50%); /* Ajuste para abarcar el ancho completo */
+            margin-right: calc(-50vw + 50%); /* Ajuste para abarcar el ancho completo */
+        }
+
+        .custom-banner .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px; /* Espaciado interno */
+            box-sizing: border-box; /* Para incluir padding en el ancho total */
+            background-color: #FFFFFF; /* Fondo blanco para los slides */
+        }
+
+        .custom-banner .slide.active {
+            opacity: 1;
+        }
+
+        .custom-banner .slide img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+            border-radius: 5px; /* Bordes redondeados para la imagen */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-right: 20px; /* Separación entre imagen y contenido */
+        }
+
+        .custom-banner .content {
+            width: 50%; /* Ancho máximo del contenido */
+            text-align: left;
+            color: #364151; /* Texto del cuerpo */
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente blanco */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados para el fondo */
+        }
+
+        .custom-banner .content h2 {
+            font-size: 36px; /* Tamaño más grande para el título */
+            margin-bottom: 15px;
+            text-transform: uppercase; /* Texto en mayúsculas */
+            letter-spacing: 1.5px; /* Espaciado entre letras */
+            color: #0F172A; /* Color del encabezado */
+        }
+
+        .custom-banner .content p {
+            font-size: 18px; /* Tamaño más grande para el párrafo */
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #364151; /* Texto del cuerpo */
+        }
+
+        .custom-banner .content a.button {
+            display: inline-block;
+            padding: 14px 28px; /* Más padding para el botón */
+            background-color: #0067FF; /* Color de los enlaces */
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 18px; /* Tamaño más grande para el texto del botón */
+        }
+
+        .custom-banner .content a.button:hover {
+            background-color: #0056cc; /* Un tono más oscuro del color del enlace */
+        }
+
+        /* Estilos para las flechas de navegación */
+        .custom-banner .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #0067FF; /* Color del enlace */
+            color: #FFFFFF; /* Color del ícono de flecha (blanco) */
+            border: none; /* Sin borde */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-banner .arrow:hover {
+            background-color: #0056cc; /* Fondo gris oscuro al pasar el cursor */
+        }
+
+        .custom-banner .arrow-left {
+            left: 10px;
+        }
+
+        .custom-banner .arrow-right {
+            right: 10px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .custom-banner {
+                height: auto; /* Ajuste de altura automática */
+            }
+
+            .custom-banner .slide {
+                flex-direction: column; /* Dirección de columna para contenido */
+                padding: 20px; /* Espaciado interno */
+                align-items: center;
+            }
+
+            .custom-banner .slide img {
+                width: 100%; /* Imágenes ocupan todo el ancho en móviles */
+                height: auto; /* Ajuste de altura automática */
+                margin-bottom: 10px; /* Margen inferior para separación */
+            }
+
+            .custom-banner .content {
+                width: 100%;
+                text-align: center;
+                padding: 10px; /* Menos padding para móviles */
+            }
+
+            .custom-banner .content h2 {
+                font-size: 24px;
+            }
+
+            .custom-banner .content p {
+                font-size: 14px;
+            }
+
+            .custom-banner .arrow {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+
+    <div class="custom-banner">
+        <div class="slide active" id="slide1">
+            <img src="https://peruventas.shop/wp-content/uploads/2024/06/data-scaled.jpg" alt="Imagen 1">
+            <div class="content">
+                <h2>Últimas colecciones de verano</h2>
+                <p>Descubre nuestras nuevas prendas diseñadas para el verano. Estilo moderno y confortable para cualquier ocasión.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <img src="https://peruventas.shop/wp-content/uploads/2024/06/data3-scaled.jpg" alt="Imagen 2">
+            <div class="content">
+                <h2>Nuevas tendencias en moda</h2>
+                <p>Explora las tendencias más recientes en moda para esta temporada. Diseños únicos que destacan tu personalidad.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <img src="https://peruventas.shop/wp-content/uploads/2022/04/home-decor-hero-bg-1.png" alt="Imagen 3">
+            <div class="content">
+                <h2>Decoración para el hogar</h2>
+                <p>Renueva tu hogar con nuestra selección exclusiva de decoración. Estilo y funcionalidad en cada detalle.</p>
+                <a href="#" class="button">Ver más</a>
+            </div>
+        </div>
+
+        <!-- Flechas de navegación -->
+        <button class="arrow arrow-left" onclick="prevSlide()">
+            &#9664; <!-- Código HTML para flecha izquierda -->
+        </button>
+        <button class="arrow arrow-right" onclick="nextSlide()">
+            &#9654; <!-- Código HTML para flecha derecha -->
+        </button>
+    </div>
+
+    <script>
+        // JavaScript para la animación del banner con flechas
+        const slides = document.querySelectorAll('.custom-banner .slide');
+        let currentSlide = 0;
+        const slideInterval = 5000; // Cambia cada 5 segundos
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function prevSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, slideInterval);
+    </script>
+</div>
